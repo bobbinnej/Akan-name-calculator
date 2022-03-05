@@ -22,7 +22,7 @@
   <h1 class="jumbotron text-center display-6">Calculate your Akan Name</h1>
   <div class="container">
     <div class="row">
-      <div class="col-lg-3 margin:50px" >
+      <div class="col-lg-3" style="background-color: green;" >
         <h2 style="color:aquamarine">About</h2>
         <p style="color: white;"><span class="gold-words">Akan</span> or <span class="gold-words">Akan names</span>
           are names derived from <span class="gold-words">Ghanian culture</span>. In this culture
@@ -38,22 +38,23 @@
         </p>
       </div>
       <!--End of the description column-->
+      
 
       <!--Column for the form created using bootstrap-->
-      <div class="col text-center">
-        <form>
-          <div class="mb-3 row">
-            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-            <div class="col-sm-10">
-              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
-            </div>
-          </div>
-          <div class="mb-3 row">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-            <div class="col-sm-10">
-              <input type="password" class="form-control" id="inputPassword">
-            </div>
-          </div>
+      <div class="col" style="color: white; background-color: brown; margin-left: 60px;">
+        <form style="margin-top: 30px;"> 
+        <label for="dd" style="margin-right: 40px;">Day</label>
+        <input type="number" placeholder="Enter day of birth" id="day"><br><br>
+
+        <label for="mm" style="margin-right: 20px;">Month</label>
+        <input type="number" placeholder="Enter month of birth" id="month"><br><br>
+
+        <label for="yy" style="margin-right: 33px;">Year</label>
+        <input type="number"  placeholder="Enter birth year" id="year"><br><br>
+
+        <button class="compute">Compute Akwasi Name</button>
+
+
         </form>
 
       </div>
