@@ -12,7 +12,7 @@
   <!-- Link html and css files-->
   <link rel="stylesheet" href="css/index.css" type="text/css" media="all">
   <!--link html and javascript files-->
-  <script src="js/index.js" type="text/javascript"></script>
+  <script src="js/index.js" ></script>
 
   <title>Akan calculator</title>
 </head>
@@ -43,30 +43,30 @@
       <!--Column for the form -->
       <div class="col" style="color: white; margin-left: 10%;">
         <form style="margin-top: 30px;">
-          <label for="dd" style="margin-right: 40px; font-weight: bolder;">Day</label>
-          <input type="number" placeholder="Enter day of birth" id="day"><br><br>
+          <label for="days" style="margin-right: 40px; font-weight: bolder;">Day</label>
+          <input type="number" placeholder="Enter day of birth" id="days"><br><br>
 
-          <label for="mm" style="margin-right: 20px; font-weight: bolder;">Month</label>
-          <input type="number" placeholder="Enter month of birth" id="month"><br><br>
+          <label for="months" style="margin-right: 20px; font-weight: bolder;">Month</label>
+          <input type="number" placeholder="Enter month of birth" id="months"><br><br>
 
-          <label for="yy" style="margin-right: 33px; font-weight: bolder;">Year</label>
-          <input type="number" placeholder="Enter year of birth" id="year"><br><br>
+          <label for="years" style="margin-right: 33px; font-weight: bolder;">Year</label>
+          <input type="number" placeholder="Enter year of birth" id="years"><br><br>
        
 
 
           <label for="gen" style="font-weight: bolder;">Gender</label>
           <label class="form-check-label" for="flexRadioDefault1">Male </label>
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" value="Male" id="flexRadioDefault1">
 
           <label class="form-check-label" for="flexRadioDefault2">Female</label>
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+          <input class="form-check-input" type="radio" name="flexRadioDefault"  value="Female"  id="flexRadioDefault2" >
 
 
           <label class="form-check-label" for="flexRadioDefault3">Others</label>
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+          <input class="form-check-input" type="radio" name="flexRadioDefault" value="Others" id="flexRadioDefault2" >
           <br><br>
 
-          <button class="compute" onclick="getInput()">Compute Akwasi Name</button> <br> <br>
+          <button class="compute" onclick="myInput()">Compute Akan Name</button> <br> <br>
 
           <label for="exampleFormControlTextarea1" class="form-label">Output</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
