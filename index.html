@@ -42,27 +42,25 @@
 
       <!--Column for the form -->
       <div class="col" style="color: white; margin-left: 10%;">
-        <form style="margin-top: 30px;"id=akan>
-          <label for="days" style="margin-right: 40px; font-weight: bolder;">Day</label>
-          <input type="number" placeholder="Enter day of birth" id="day" required><br><br>
+        <form style="margin-top: 30px;">
 
-          <label for="months" style="margin-right: 20px; font-weight: bolder;">Month</label>
-          <input type="number" placeholder="Enter month of birth" id="month" required><br><br>
-
-          <label for="years" style="margin-right: 33px; font-weight: bolder;">Year</label>
-          <input type="number" placeholder="Enter year of birth" id="year" required><br><br>
+          <label for="gen" style="font-weight: bolder;">Enter your Birthday</label><br><br>
+          <div class="input-group mb15">
+            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+            <input type="text" placeholder="mm/dd/yyyy" id="getBirthDate" class="form-control" autocomplete="off" required>
+         </div><br><br>
        
+    
 
-
-          <label for="gen" style="font-weight: bolder;">Gender</label>
+          <label for="gen" style="font-weight: bolder;">Gender</label><br><br>
           <label class="form-check-label" for="flexRadioDefault1">Male </label>
           <input class="form-check-input" type="radio" name="flexRadioDefault" value="Male" id="flexRadioDefault1" checked>
 
           <label class="form-check-label" for="flexRadioDefault2">Female</label>
           <input class="form-check-input" type="radio" name="flexRadioDefault"  value="Female"  id="flexRadioDefault2" checked>
+          <br><br><br>
 
-
-          <button class="compute"   onclick="myInput()">Compute Akan Name</button> <br> <br>
+          <button class="compute" onclick="computeAkanName()"  id="submit-btn">Compute Akan Name</button> <br> <br>
 
           <label for="addResult" class="form-label">Output</label>
           <textarea class="form-control" id="addResult" rows="3"></textarea>
