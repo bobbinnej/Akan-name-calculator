@@ -8,11 +8,11 @@
 /*Get user input from html to js */
 function computeAkanName(){
     let birthdate=document.getElementById("getBirthDate").value;
-    var flexRadioDefault=document.getElementsByName("flexRadioDefault").value;
+    var flexRadioDefault=document.getElementsByName("flexRadioDefault");
     
     for(i=0; i<flexRadioDefault.length; i++){
         if(flexRadioDefault[i].checked){
-            alert(flexRadioDefault[i].value);
+        alert(flexRadioDefault[i].value);
         }
        
    
@@ -33,11 +33,11 @@ var dayOfTheWeek= dateborn.getDay();
 console.log("dateborn",dateborn.getDay());
 
 if(flexRadioDefault === "Male"){
-  addResult.innerHTML =`Wow! You were born on a ,${days[dayOfTheWeek]} and Your Akan name is ${maleAkanNames[dayOfTheWeek]}`;
+  alert(`Wow! You were born on a ,${days[dayOfTheWeek]} and Your Akan name is ${maleAkanNames[dayOfTheWeek]}`);
 }
 
 else{
-addResult.innerHTML =`Wow! You were born on a ,${days[dayOfTheWeek]} and Your Akan name is ${femaleAkanNames[dayOfTheWeek]}`;
+alert(`Wow! You were born on a ,${days[dayOfTheWeek]} and Your Akan name is ${femaleAkanNames[dayOfTheWeek]}`);
 
 }
 
