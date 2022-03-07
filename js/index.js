@@ -1,35 +1,44 @@
+
+     const submitButton=document.getElementById("submit-btn");
+   
+
+
+
+
+/*Get user input from html to js */
 function computeAkanName(){
-    var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-    var maleAkanNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
-    var femaleAkanNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
-    var myBirthday = document.getElementById("myBirthDate").value;
-    var myGender = document.getElementsByName("FlexRadioDefault");
-    var dateOfBirth = new Date(getBirthDate);
-    var dayOfTheWeek = dateOfBirth.getDay();
-    if(myBirthday === ""){
-        document.getElementById('message').innerHTML = "<div class=\"alert alert-danger\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">x</button><strong>Oh snap!</strong> You Didn't Submit a Valid Date!</div>";
-        $('#message').addClass("animated shake");
-    }
-    else {
-        for(var i=0;i<myGender.length;i++){
-            if(myGender[i].checked){
-                if(myGender[i].value === "Male"){
-                    document.getElementById('message').innerHTML = "<span><i class=\"fa fa-male\"></i></span>&nbsp;&nbsp; Born on a <span>" + days[dayOfTheWeek] + "</span>, Your Akan Name's <span>" + maleAkanNames[dayOfTheWeek] + "</span>";
-                    $('#message span:first-child').addClass("animated fadeInDown");
-                    $('#message span:last-child').addClass("animated fadeInUp");
-                }
-                else {
-                    document.getElementById('message').innerHTML = "<span><i class=\"fa fa-female\"></i></span>&nbsp;&nbsp; Born on a <span>" + days[dayOfTheWeek] + "</span>, Your Akan Name's <span>" + femaleAkanNames[dayOfTheWeek] + "</span>";
-                    $('#message span:first-child').addClass("animated fadeInDown");
-                    $('#message span:last-child').addClass("animated fadeInUp");
-                }
-                break;
-            }    
-            else {
-                document.getElementById('message').innerHTML = "<div class=\"alert alert-danger\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">x</button><strong>Oh snap!</strong> You Should Select a Gender Too Determine Your Akan Name!</div>";
-                $('#message').addClass("animated shake");
-            }
+    let birthdate=document.getElementById("getBirthDate").value;
+    var flexRadioDefault=document.getElementsByName("flexRadioDefault").value;
+    
+    for(i=0; i<flexRadioDefault.length; i++){
+        if(flexRadioDefault[i].checked){
+            alert(flexRadioDefault[i].value);
         }
+       
+   
     }
+
+
+
+/*Arrays for male,female and days */
+
+var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var maleAkanNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
+var femaleAkanNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
+
+var addResult=document.getElementById("addResult");
+
+var dateborn= new Date (birthdate);
+var dayOfTheWeek= dateborn.getDay();
+console.log("dateborn",dateborn.getDay());
+
+if(flexRadioDefault === "Male"){
+  addResult.innerHTML =`Wow! You were born on a ,${days[dayOfTheWeek]} and Your Akan name is ${maleAkanNames[dayOfTheWeek]}`;
 }
 
+else{
+addResult.innerHTML =`Wow! You were born on a ,${days[dayOfTheWeek]} and Your Akan name is ${femaleAkanNames[dayOfTheWeek]}`;
+
+}
+
+}
